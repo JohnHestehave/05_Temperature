@@ -4,7 +4,7 @@ namespace _05_Temperature
 {
 	internal interface ITemperature
 	{
-		double Convert();
+		double Convert(double T);
 	}
 	internal class TemperatureFactory
 	{
@@ -23,14 +23,14 @@ namespace _05_Temperature
 
 	internal class Celcius : ITemperature
 	{
-		double Convert(double T)
+		public double Convert(double T)
 		{
 			return (5 * T - 160) / 9;
 		}
 	}
 	internal class Fahrenheit : ITemperature
 	{
-		double Convert(double T)
+		public double Convert(double T)
 		{
 			return T * 9 / 5 + 32;
 		}
